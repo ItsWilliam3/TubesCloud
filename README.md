@@ -72,6 +72,24 @@ yang akan menampilkan versi Flask seperti pada gambar
 
 ![image](https://github.com/user-attachments/assets/7a4ea93f-926d-4768-ae87-40ed8054e5c0)
 
+Ketika virtual environment sudah aktif, gunakan Python package manager `pip` untuk menginstal Flask
+```
+pip install Flask
+```
+untuk mengverifikasi apakah Flask sudah terinstal bisa jalankan perintah :
+```
+python -m flask --version
+```
+yang akan menampilkan versi Flask seperti pada gambar
+
+![image](https://github.com/user-attachments/assets/7a4ea93f-926d-4768-ae87-40ed8054e5c0)
+
+# Menginstal Docker Compose
+Menginstal docker compose dapat menggunakan perintah:
+```
+sudo apt install docker-compose
+```
+
 
 
 
