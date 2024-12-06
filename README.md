@@ -35,6 +35,7 @@ Untuk mengverifikasi apakah docker sudah terinstal bisa jalankan perintah
 sudo docker run hello-world
 ```
 Akan muncul gambar seperti ini
+
 ![image](https://github.com/user-attachments/assets/73bddc29-6254-42ca-9b2d-443b2e9de442)
 
 
