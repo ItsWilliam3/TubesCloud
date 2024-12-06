@@ -111,13 +111,61 @@ Masukan script web app flask python ke dalam `calculator.py` sehingga tampilanny
 
 untuk script ini bisa di download di atas
 
+Karena script ini memperlukan `html` agar dapat bekerja maka kita perlu membuat folder baru lagi bernama `templates`
+```
+mkdir templates && cd templates
+```
+Buat file `.html` yang diberi nama sama seperti file script python
+```
+nano calculator.html
+```
+Masukan file `.html` seperti di bawah ini
+
+![image](https://github.com/user-attachments/assets/16eaf2d1-1893-4157-a114-0ad09322503d)
+
+file `.html` juga bisa di dapatkan di folder html di atas
+
+# Membuat Dockerfile dan docker-compose.yml
+Sebelum membuat Dockerfile dan docker-compose.yml kembali ke folder TubesCC menggunakan `cd ..`
+Kemudian buat file Dockerfile dengan menggunakan
+```
+nano Dockerfile
+```
+masukan ini ke dalam Dockerfile untuk containerization
+
+![image](https://github.com/user-attachments/assets/98d493e7-5516-4692-b95a-ee1a949ced40)
+
+Dockerfile ini juga tersedia di atas
+
+Kemudian kita buat juga docker-compose.yml yang berisikan
+
+![image](https://github.com/user-attachments/assets/1a9037de-2352-4865-8245-a430736762e5)
+
+yang juga tersedia di atas
+
+sebelum menjalankan docker kita perlu membuat file requirements untuk menjalankan docker compose dengan menggunakan
+```
+nano requirements.txt
+```
+kemudian masukan saja satu kalimat `flask` kemudian close dan save
+
+# Menjalankan Docker
+untuk menjalankan docker kita dapat menggunakan 
+```
+docker compose up -d
+```
+sehingga tampilan muncul seperti ini
+
+![image](https://github.com/user-attachments/assets/1631ab5d-fad9-43d0-b9e1-9b67fb8963da)
+
+coba buka browser dan masukan salah satu IP dibawah ini 
+
+![image](https://github.com/user-attachments/assets/94c2cae4-84ad-472a-98a5-a0b43f31bd90)
+
+di coba saja IP nya satu-satu
 
 
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/e792ce2d-77d5-4891-b26c-c700058d0a43)
 
 
 
