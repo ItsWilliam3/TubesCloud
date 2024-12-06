@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+        }
+        input, select, button {
+            margin: 5px;
+        }
+        .error {
+            color: red;
+        }
+        .result {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Web Calculator</h1>
+    <form method="POST">
+        <label for="num1">Number 1:</label><br>
+        <input type="text" id="num1" name="num1" required><br>
+
+        <label for="num2">Number 2:</label><br>
+        <input type="text" id="num2" name="num2" required><br>
+
+        <label for="operation">Operation:</label><br>
+        <select id="operation" name="operation">
+            <option value="add">Add</option>
+            <option value="subtract">Subtract</option>
+            <option value="multiply">Multiply</option>
+            <option value="divide">Divide</option>
+        </select><br><br>
+
+        <button type="submit">Calculate</button>
+    </form>
+
+    {% if result is not none %}
+        <p class="result">Result: {{ result }}</p>
+    {% endif %}
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+</body>
+</html>
