@@ -168,7 +168,7 @@ Ketika berhasil maka anda dapat membuka Web App yang sudah di Docker-kan
 
 ![image](https://github.com/user-attachments/assets/e792ce2d-77d5-4891-b26c-c700058d0a43)
 
-Untuk mematikan docker-compose maka anda hanya perlu menekan `CTRL + C`
+Untuk mematikan docker-compose maka anda hanya perlu menekan `CTRL + C` di terminal
 
 
 
