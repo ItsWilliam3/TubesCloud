@@ -34,5 +34,61 @@ Untuk mengverifikasi apakah docker sudah terinstal bisa jalankan perintah
 ```
 sudo docker run hello-world
 ```
+Akan muncul gambar seperti ini
 ![image](https://github.com/user-attachments/assets/73bddc29-6254-42ca-9b2d-443b2e9de442)
-Akan muncul seperti gambar di atas
+
+
+# Menginstal Flask
+Flask adalah framework WSGI yang ringan. Flask digunakan untuk membuat aplikasi web sederhana.
+Instal dahulu virtual environment menggunakan modul venv
+```
+sudo apt install python3-venv
+```
+Buat direktori baru dan pindah ke direktori tersebut menggunakan perintah :
+```
+mkdir flask_app && cd flask_app
+```
+Kemudian jalankan perintah ini di dalam direktori tersebut untuk membuat virtual environment
+```
+python3 -m venv venv
+```
+Aktifkan virtual environment menggunakan perintah ini
+```
+source venv/bin/activate
+```
+Ketika sudah diaktifkan bin virtual environment akan muncul di awal variable $PATH seperti di gambar
+![image](https://github.com/user-attachments/assets/edc93e27-527a-462f-a4c3-fc1f7ab78a6a)
+
+Ketika virtual environment sudah aktif, gunakan Python package manager `pip` untuk menginstal Flask
+```
+pip install Flask
+```
+untuk mengverifikasi apakah Flask sudah terinstal bisa jalankan perintah :
+```
+python -m flask --version
+```
+yang akan menampilkan versi Flask seperti pada gambar
+
+![image](https://github.com/user-attachments/assets/7a4ea93f-926d-4768-ae87-40ed8054e5c0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
