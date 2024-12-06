@@ -6,7 +6,9 @@
 ## Reivanza Laksono (1101210320)
 ## Charlos Alvaredo Simanullang (1101213158)
 
-### Sebelum menggunakan docker anda dapat menggunakan anda harus menginstal flask, docker engine serta docker compose terlebih dahulu
+Sebelum menggunakan docker anda dapat menggunakan anda harus menginstal flask, docker engine serta docker compose terlebih dahulu
+
+# Menginstal aplikasi yang ingin digunakan
 
 ## Menginstal Docker Engine
 Untuk menginstal docker anda perlu mengetik perintah ini di terminal :
@@ -91,8 +93,23 @@ sudo apt install docker-compose
 ```
 
 
-# 
+# Membuat Web App untuk di docker-kan
 
+Buka terminal baru, kemudian buat direktori baru untuk meletakan file web app, untuk web app akan saya buat menggunakan python
+saya menggunakan TubesCC sebagai nama folder
+```
+mkdir TubesCC && cd TubesCC
+```
+Buat file berformat `.py` untuk membuat web app. Saya menggunakan calculator sebagai web app
+```
+nano calculator.py
+```
+Masukan script web app flask python ke dalam `calculator.py` sehingga tampilannya seperti ini
+
+
+![image](https://github.com/user-attachments/assets/6e698c45-215c-4a8f-b6d0-605532a8a998)
+
+untuk script ini bisa di download di atas
 
 
 
