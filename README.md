@@ -152,11 +152,11 @@ kemudian masukan saja satu kalimat `flask` kemudian close dan save
 # Menjalankan Docker
 untuk menjalankan docker kita dapat menggunakan 
 ```
-docker compose up -d
+docker compose up 
 ```
 sehingga tampilan muncul seperti ini
 
-![image](https://github.com/user-attachments/assets/1631ab5d-fad9-43d0-b9e1-9b67fb8963da)
+![image](https://github.com/user-attachments/assets/53c0a18b-06da-4439-87f3-be14895a7739)
 
 coba buka browser dan masukan salah satu IP dibawah ini 
 
@@ -164,10 +164,11 @@ coba buka browser dan masukan salah satu IP dibawah ini
 
 di coba saja IP nya satu-satu
 
+Ketika berhasil maka anda dapat membuka Web App yang sudah di Docker-kan
 
 ![image](https://github.com/user-attachments/assets/e792ce2d-77d5-4891-b26c-c700058d0a43)
 
-
+Untuk mematikan docker-compose maka anda hanya perlu menekan `CTRL + C`
 
 
 
