@@ -158,6 +158,22 @@ services:
   calculator:
 ``` 
 `services` mendefinisikan container yang menyusun container yang bernama `calculator`
+`    build: .` memerintahkan Docker Compose untuk membangun image untuk service `calculator` menggunakan Dockerfile dan membuatnya di direktori ini
+```
+    ports:
+      - "8080:80"
+```
+memetakan port 80 di dalam kontainer ke port 8080
+```
+    volumes:
+      - .:/app
+```
+memasang direktori host ke direktor `/app` didalam container
+```
+    environment:
+      - FLASK_ENV=development
+```
+menetapkan variable environment untuk container, `- FLASK_ENV=development` memerintahkan Flask untuk jalan dalam mode development
 
 sebelum menjalankan docker kita perlu membuat file requirements untuk menjalankan docker compose dengan menggunakan
 ```
