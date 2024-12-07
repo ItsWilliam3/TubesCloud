@@ -1,4 +1,4 @@
-# TubesCloud
+# Tugas Docker
 
 ## Mohamad Farrel William Rosyadi (1101210306)
 ## Geva Almer Hariri (1101213144)
