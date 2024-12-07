@@ -11,6 +11,7 @@ Sebelum menggunakan docker anda dapat menggunakan anda harus menginstal flask, d
 # Menginstal aplikasi yang ingin digunakan
 
 ## Menginstal Docker Engine
+Docker Engine adalah teknologi kontainerisasi open source digunakan untuk membangun dan mengkontainerisasi aplikasi.
 Untuk menginstal docker anda perlu mengetik perintah ini di terminal :
 ```
 sudo apt-get update
@@ -87,6 +88,7 @@ yang akan menampilkan versi Flask seperti pada gambar
 ![image](https://github.com/user-attachments/assets/7a4ea93f-926d-4768-ae87-40ed8054e5c0)
 
 ## Menginstal Docker Compose
+Docker Compose digunakan untuk mendefinisikan dan menjalankan aplikasi yang menggunakan beberapa container
 Menginstal docker compose dapat menggunakan perintah:
 ```
 sudo apt install docker-compose
@@ -110,8 +112,7 @@ Masukan script web app flask python ke dalam `calculator.py` sehingga tampilanny
 ![image](https://github.com/user-attachments/assets/6e698c45-215c-4a8f-b6d0-605532a8a998)
 
 untuk script ini bisa di download di atas
-
-Karena script ini memperlukan `html` agar dapat bekerja maka kita perlu membuat folder baru lagi bernama `templates`
+Script ini merupakan script calculator Web App berbasis python yang bisa menambahkan, mengurang, mengkali dan membagi dan juga menggunakan `html`. Karena script ini memperlukan `html` agar dapat bekerja maka kita perlu membuat folder baru lagi bernama `templates`
 ```
 mkdir templates && cd templates
 ```
@@ -126,6 +127,7 @@ Masukan file `.html` seperti di bawah ini
 file `.html` juga bisa di dapatkan di folder html di atas
 
 # Membuat Dockerfile dan docker-compose.yml
+Docker file adalah teks dokumen yang berisikan perintah untuk membangun image pada docker
 Sebelum membuat Dockerfile dan docker-compose.yml kembali ke folder TubesCC menggunakan `cd ..`
 Kemudian buat file Dockerfile dengan menggunakan
 ```
@@ -136,12 +138,26 @@ masukan ini ke dalam Dockerfile untuk containerization
 ![image](https://github.com/user-attachments/assets/98d493e7-5516-4692-b95a-ee1a949ced40)
 
 Dockerfile ini juga tersedia di atas
+Berikut isi Dockerfile yang saya gunakan
+`FROM python:3.11-slim` adalah dasar image dari container nya menggunakan versi ringan python 3.11
+`WORKDIR /app`  membuat direktori kontainer ke direktori `/app`
+`COPY . /app` memindahkan semua isi direktori dari host ke `/app` di container
+`RUN pip install --no-cache-dir -r requirements.txt` menginstal --ketergantungan-- kebutuhan yang di list di file `requirements.txt` yang akan kita buat di bawah `--no-cache-dir` digunakan supaya `pip` tidak caching file instalasi
+`EXPOSE 80` mengdeklarasikan kontainer akan menggunakan port 80
+`CMD ["python", "calculator.py"]` spesifikasikan perintah mana yang dijalankan ketika container jalan
 
 Kemudian kita buat juga docker-compose.yml yang berisikan
 
 ![image](https://github.com/user-attachments/assets/1a9037de-2352-4865-8245-a430736762e5)
 
 yang juga tersedia di atas
+Berikut isi dari docker-compose.yml
+`version: '3.8'` Versi dari Docker Compose yang digunakan
+```
+services:
+  calculator:
+``` 
+`services` mendefinisikan container yang menyusun container yang bernama `calculator`
 
 sebelum menjalankan docker kita perlu membuat file requirements untuk menjalankan docker compose dengan menggunakan
 ```
