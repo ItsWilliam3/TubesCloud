@@ -139,6 +139,7 @@ masukan ini ke dalam Dockerfile untuk containerization
 
 Dockerfile ini juga tersedia di atas
 Berikut isi Dockerfile yang saya gunakan
+
 `FROM python:3.11-slim` adalah dasar image dari container nya menggunakan versi ringan python 3.11
 `WORKDIR /app`  membuat direktori kontainer ke direktori `/app`
 `COPY . /app` memindahkan semua isi direktori dari host ke `/app` di container
@@ -152,6 +153,7 @@ Kemudian kita buat juga docker-compose.yml yang berisikan
 
 yang juga tersedia di atas
 Berikut isi dari docker-compose.yml
+
 `version: '3.8'` Versi dari Docker Compose yang digunakan
 ```
 services:
