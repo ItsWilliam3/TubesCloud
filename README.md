@@ -138,13 +138,19 @@ masukan ini ke dalam Dockerfile untuk containerization
 ![image](https://github.com/user-attachments/assets/98d493e7-5516-4692-b95a-ee1a949ced40)
 
 Dockerfile ini juga tersedia di atas
+
 Berikut isi Dockerfile yang saya gunakan
 
 `FROM python:3.11-slim` adalah dasar image dari container nya menggunakan versi ringan python 3.11
+
 `WORKDIR /app`  membuat direktori kontainer ke direktori `/app`
+
 `COPY . /app` memindahkan semua isi direktori dari host ke `/app` di container
+
 `RUN pip install --no-cache-dir -r requirements.txt` menginstal --ketergantungan-- kebutuhan yang di list di file `requirements.txt` yang akan kita buat di bawah `--no-cache-dir` digunakan supaya `pip` tidak caching file instalasi
+
 `EXPOSE 80` mengdeklarasikan kontainer akan menggunakan port 80
+
 `CMD ["python", "calculator.py"]` spesifikasikan perintah mana yang dijalankan ketika container jalan
 
 Kemudian kita buat juga docker-compose.yml yang berisikan
